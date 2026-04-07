@@ -2,12 +2,12 @@
   "name": "student-management-system",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/app.js",
 "scripts": {
-  "start": "node app.js",
-  "dev": "nodemon app.js",
-  "seed": "node seed/seed/seed.js",
-  "docs": "npx apidoc -i routes/ -o docs/"
+  "start": "node server/app.js",
+  "dev": "nodemon server/app.js",
+  "seed": "node server/seed/seed.js",
+  "docs": "npx apidoc -i server/routes/ -o docs/"
 },
   "keywords": [],
   "author": "",
