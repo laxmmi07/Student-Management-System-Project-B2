@@ -6,7 +6,7 @@
 "scripts": {
   "start": "node app.js",
   "dev": "nodemon app.js",
-  "seed": "node seed/seed.js",
+  "seed": "node seed/seed/seed.js",
   "docs": "npx apidoc -i routes/ -o docs/"
 },
   "keywords": [],
