@@ -1,9 +1,11 @@
 import { Selector } from 'testcafe';
 
-const BASE_URL = 'http://127.0.0.1:5500';
-
+const BASE_URL = 'http://127.0.0.1:5500/client/index.html';
 fixture('Student Management System')
-  .page(BASE_URL);
+  .page(BASE_URL)
+  .beforeEach(async t => {
+    await t.wait(2000);
+  }); 
 
 // Test 1: Page loads correctly
 test('Page loads and shows the header', async t => {

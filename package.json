@@ -8,8 +8,7 @@
     "dev": "nodemon server/app.js",
     "seed": "node server/seed/seed.js",
     "docs": "npx apidoc -i server/routes/ -o docs/ -c server/apidoc.json",
-    "test": "testcafe chrome tests/student.test.js"
-  },
+"test": "testcafe path:'C:/Users/don48/AppData/Local/BraveSoftware/Brave-Browser/Application/brave.exe' tests/student.test.js"},
   "keywords": [],
   "author": "",
   "license": "ISC",
