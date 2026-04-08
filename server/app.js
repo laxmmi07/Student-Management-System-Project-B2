@@ -4,30 +4,18 @@ const cors = require("cors");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const studentRoutes = require("./routes/students");
-const courseRoutes  = require("./routes/courses");
-const teacherRoutes = require("./routes/teachers");
-
-app.use("/api/courses",  courseRoutes);
-app.use("/api/teachers", teacherRoutes);
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
-
-// Serve generated API docs statically
 app.use("/docs", express.static("docs"));
-
-// Routes
 app.use("/api/students", studentRoutes);
 
-// Health check
 app.get("/", (req, res) => {
   res.json({ message: "Student Management API is running!" });
 });
 
-// Connect to MongoDB then start server
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
