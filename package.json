@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server/app.js",
-"scripts": {
-  "start": "node server/app.js",
-  "dev": "nodemon server/app.js",
-  "seed": "node server/seed/seed.js",
-  "docs": "npx apidoc -i server/routes/ -o docs/ -c server/apidoc.json"},
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "seed": "node server/seed/seed.js",
+    "docs": "npx apidoc -i server/routes/ -o docs/ -c server/apidoc.json",
+    "test": "testcafe chrome tests/student.test.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "apidoc": "^1.2.0",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "testcafe": "^3.7.4"
   }
 }
